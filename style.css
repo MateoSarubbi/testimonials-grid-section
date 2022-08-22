@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height:100vh;
+    margin: 10% 0;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    background-color:hsl(210, 46%, 95%);
+}
+
+p {
+    line-height:1.5em;
+}
+
+.container {
+    display:grid;
+    gap:30px;
+    max-width: 90%;
+    padding: 5% 0;
+}
+
+.card {
+    background-color: #b4b8b9;
+    color: white;
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+    border-radius: 10px;
+    padding:25px 30px;
+    font-family:'Barlow Semi Condensed', sans-serif;
+}
+
+.card__header {
+    display:flex;
+    gap:15px;
+    align-items:center;
+}
+
+.card__img {
+    border-radius:50px;
+    border:solid 2px #fff;
+}
+
+.card__person-info {
+    height:fit-content;
+}
+
+.card--violet {
+    background-color:hsl(263, 55%, 52%);
+    background-image: url("images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position:90% top;
+
+}
+
+.card--graysh-blue {
+    background-color:hsl(217, 19%, 35%);
+}
+
+.card--white {
+    background-color:hsl(0, 0%, 100%);
+}
+
+.card--dark-blue {
+    background-color:hsl(219, 29%, 14%);
+}
+
+.card--dark {
+    color:hsl(0, 0%, 100%);
+}
+
+.card--light {
+    color:hsl(217, 19%, 35%);
+}
+
+.verified-graduate {
+    opacity:0.5;
+}
+
+.review-paragraph {
+    opacity:0.7;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media(min-width:1440px) {
+    body {
+        margin:0;
+    }
+    .container {
+        padding:0;
+        max-width: 70%;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .card:nth-of-type(1) {
+        grid-column: 1/3;
+    }
+    .card:nth-of-type(3) {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .card:nth-of-type(4) {
+        grid-column: 2/4;
+    }
+    .card:nth-of-type(5) {
+        grid-column: 4/5;
+        grid-row: 1/3;
+    }
+    .attribution {
+        position:absolute;
+        bottom:0;
+    }
+}
