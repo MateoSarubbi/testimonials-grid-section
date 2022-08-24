@@ -21,7 +21,6 @@ body {
     margin: 0 auto;
     gap:30px;
     max-width: 90%;
-    padding: 5% 0;
 }
 
 .testimonial {
@@ -87,7 +86,7 @@ body {
     opacity:0.5;
 }
 
-.review-paragraph {
+blockquote {
     opacity:0.7;
 }
 
@@ -111,7 +110,6 @@ body {
     grid-area: five;
 }
 
-
 .attribution { 
     font-size: 11px; 
     text-align: center;
@@ -121,6 +119,7 @@ body {
 
 @media(min-width:1100px) {
     .testimonial-grid {
+        max-width: 1110px;
         grid-template-areas:
             "one one two five"
             "three four four five";
